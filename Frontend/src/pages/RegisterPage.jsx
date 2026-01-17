@@ -38,9 +38,7 @@ const RegisterPage = () => {
     }
   };
 
-  /* ======================
-        INLINE STYLES
-     =======================*/
+  
   const pageStyle = {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #667eea, #764ba2)",
@@ -79,7 +77,6 @@ const RegisterPage = () => {
     <div style={pageStyle}>
       <div style={cardStyle} className="p-4">
 
-        {/* Header */}
         <div className="text-center mb-4">
           <div
             style={{
@@ -102,7 +99,6 @@ const RegisterPage = () => {
           <small>Register to get started</small>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label">Name *</label>
@@ -178,7 +174,6 @@ const RegisterPage = () => {
           </button>
         </form>
 
-        {/* Footer */}
         <div className="text-center mt-4">
           <p className="mb-1">Already have an account?</p>
           <span
@@ -198,3 +193,4 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+
