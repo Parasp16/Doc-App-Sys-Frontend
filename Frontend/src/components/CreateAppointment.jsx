@@ -51,9 +51,7 @@ const CreateAppointment = () => {
     }
   }
 
-  /* ======================
-        INLINE STYLES
-     =======================*/
+  
   const cardStyle = {
     background: "#ffffff",
     borderRadius: "16px",
@@ -91,7 +89,6 @@ const CreateAppointment = () => {
       <h4 style={titleStyle}>📅 Create Appointment</h4>
 
       <form onSubmit={handleSubmit}>
-        {/* Date & Time */}
         <div className="mb-3">
           <label className="form-label fw-semibold">
             Select Date & Time
@@ -106,7 +103,6 @@ const CreateAppointment = () => {
           />
         </div>
 
-        {/* Doctor List */}
         <div className="mb-4">
           <label className="form-label fw-semibold">
             Select Doctor
@@ -127,7 +123,6 @@ const CreateAppointment = () => {
           </select>
         </div>
 
-        {/* Submit */}
         <button
           type="submit"
           style={buttonStyle}
@@ -142,3 +137,4 @@ const CreateAppointment = () => {
 };
 
 export default CreateAppointment;
+
