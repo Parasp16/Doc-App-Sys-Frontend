@@ -56,7 +56,6 @@ const ApplyDoctor = () => {
       <h4 className="mb-3 text-center">Apply for Doctor</h4>
 
       <form onSubmit={handleSubmit}>
-        {/* Speciality */}
         <div className="mb-3">
           <label className="form-label">Speciality</label>
           <input
@@ -69,7 +68,6 @@ const ApplyDoctor = () => {
           />
         </div>
 
-        {/* Fees */}
         <div className="mb-3">
           <label className="form-label">Consultation Fees</label>
           <input
@@ -95,3 +93,4 @@ const ApplyDoctor = () => {
 }
 
 export default ApplyDoctor
+
