@@ -6,7 +6,6 @@ const AdminDoctorRequests = () => {
   const [requests, setRequests] = useState([])
   const [loading, setLoading] = useState(true)
 
-  // fetch pending requests
   const fetchRequests = async () => {
     try {
       const res = await axiosInstance.get("/admin/doctor-requests")
@@ -21,7 +20,6 @@ const AdminDoctorRequests = () => {
     }
   }
 
-  // approve / reject
   const updateStatus = async (requestId, status) => {
     try {
       const res = await axiosInstance.post(
@@ -32,7 +30,6 @@ const AdminDoctorRequests = () => {
       if (res.data.success) {
         toast.success(res.data.msg)
 
-        // remove from list after action
         setRequests(prev =>
           prev.filter(req => req._id !== requestId)
         )
@@ -93,3 +90,4 @@ const AdminDoctorRequests = () => {
 }
 
 export default AdminDoctorRequests
+
