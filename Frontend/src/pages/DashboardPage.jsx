@@ -9,7 +9,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import { getLoggedUser } from "../api/userAPI";
 
-// Components
 import Profile from "../components/Profile";
 import Appointments from "../components/Appointments";
 import CreateAppointment from "../components/CreateAppointment";
@@ -39,9 +38,7 @@ const DashboardNavbar = () => {
     fetchUser();
   }, []);
 
-  /* ======================
-     PAGE CONTENT
-  =======================*/
+  
   const renderContent = () => {
     if (!user) return null;
 
@@ -65,9 +62,7 @@ const DashboardNavbar = () => {
     }
   };
 
-  /* ======================
-     MENU BY ROLE
-  =======================*/
+  
   const renderMenu = () => {
     if (!user) return null;
 
@@ -144,9 +139,7 @@ const DashboardNavbar = () => {
     );
   };
 
-  /* ======================
-     STYLES
-  =======================*/
+  
   const sidebarStyle = {
     background: "linear-gradient(180deg, #1e3c72, #2a5298)",
     minHeight: "100vh",
@@ -168,7 +161,6 @@ const DashboardNavbar = () => {
     <div className="container-fluid">
       <div className="row">
 
-        {/* SIDEBAR */}
         <div className="col-md-3 col-lg-2 text-white p-4" style={sidebarStyle}>
           <div className="text-center mb-4">
             <div
@@ -209,7 +201,6 @@ const DashboardNavbar = () => {
           </ul>
         </div>
 
-        {/* MAIN CONTENT */}
         <div className="col-md-9 col-lg-10 p-4" style={contentStyle}>
           <div style={cardStyle}>{renderContent()}</div>
         </div>
@@ -218,9 +209,7 @@ const DashboardNavbar = () => {
   );
 };
 
-/* ======================
-   MENU BUTTON
-======================*/
+
 const MenuBtn = ({ label, icon, onClick }) => (
   <li className="nav-item mb-2">
     <button
@@ -246,3 +235,4 @@ const MenuBtn = ({ label, icon, onClick }) => (
 );
 
 export default DashboardNavbar;
+
