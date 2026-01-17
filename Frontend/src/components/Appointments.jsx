@@ -37,9 +37,7 @@ const Appointments = () => {
     fetchData();
   }, []);
 
-  /* ======================
-        ACTION HANDLERS
-     =======================*/
+  
   const handleUpdate = async (id) => {
     try {
       const res = await axiosInstance.put(
@@ -152,9 +150,7 @@ const Appointments = () => {
     );
   }
 
-  /* ======================
-        INLINE STYLES
-     =======================*/
+  
   const cardStyle = {
     background: "#fff",
     borderRadius: "14px",
@@ -212,7 +208,7 @@ const Appointments = () => {
               {new Date(app.dateTime).toLocaleString()}
             </p>
 
-            {/* DOCTOR */}
+            
             {user?.role === "Doctor" && (
               <>
                 {app.status === "pending" && (
@@ -244,7 +240,6 @@ const Appointments = () => {
               </>
             )}
 
-            {/* ADMIN */}
             {user?.role === "Admin" && (
               <>
                 <button
@@ -266,7 +261,6 @@ const Appointments = () => {
               </>
             )}
 
-            {/* USER */}
             {user?.role === "User" && (
               <>
                 {editingId === app._id ? (
@@ -325,3 +319,4 @@ const Appointments = () => {
 };
 
 export default Appointments;
+
