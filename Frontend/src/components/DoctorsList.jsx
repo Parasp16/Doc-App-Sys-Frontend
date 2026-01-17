@@ -46,7 +46,6 @@ const DoctorsList = () => {
               gap: 15
             }}
           >
-            {/* 👇 Doctor Image */}
             <img
               src={
                 doc.imagePath
@@ -59,7 +58,6 @@ const DoctorsList = () => {
               style={{ borderRadius: "50%", objectFit: "cover" }}
             />
 
-            {/* Doctor Info */}
             <div>
               <p><b>Name:</b> {doc.name}</p>
               <p><b>Email:</b> {doc.email}</p>
@@ -72,3 +70,4 @@ const DoctorsList = () => {
 }
 
 export default DoctorsList
+
