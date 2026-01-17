@@ -36,9 +36,7 @@ const LoginPage = () => {
     }
   };
 
-  /* ======================
-        INLINE STYLES
-     =======================*/
+  
   const pageStyle = {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #1e3c72, #2a5298)",
@@ -76,7 +74,6 @@ const LoginPage = () => {
     <div style={pageStyle}>
       <div style={cardStyle} className="p-4">
 
-        {/* Header */}
         <div className="text-center mb-4">
           <div
             style={{
@@ -99,7 +96,6 @@ const LoginPage = () => {
           <small>Login to continue</small>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label">Email</label>
@@ -142,7 +138,6 @@ const LoginPage = () => {
           </button>
         </form>
 
-        {/* Footer */}
         <div className="text-center mt-4">
           <p className="mb-1">
             Don’t have an account?
@@ -164,3 +159,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
