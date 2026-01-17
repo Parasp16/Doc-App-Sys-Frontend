@@ -8,7 +8,6 @@ const Profile = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Fetch user info
   useEffect(() => {
     axiosInstance.get("/user/getUserInfo").then((res) => {
       if (res.data.success) {
@@ -17,7 +16,6 @@ const Profile = () => {
     });
   }, []);
 
-  // Upload profile image
   const handleUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -55,9 +53,7 @@ const Profile = () => {
     );
   }
 
-  /* ======================
-        INLINE STYLES
-     =======================*/
+  
   const cardStyle = {
     maxWidth: "420px",
     margin: "auto",
@@ -89,7 +85,6 @@ const Profile = () => {
         👤 My Profile
       </h4>
 
-      {/* Profile Image */}
       <div className="text-center mb-3">
         <div style={avatarWrapper}>
           <img
@@ -109,7 +104,6 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* Upload */}
       <input
         type="file"
         className="form-control mb-4"
@@ -117,7 +111,6 @@ const Profile = () => {
         disabled={loading}
       />
 
-      {/* Info */}
       <div style={infoRow}>
         <b>Name:</b> {user.name}
       </div>
@@ -138,3 +131,4 @@ const Profile = () => {
 };
 
 export default Profile;
+
